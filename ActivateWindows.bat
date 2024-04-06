@@ -1,0 +1,9 @@
+@echo off
+echo Assigning Product Key ...
+powershell -Command "Start-Process cmd.exe -Verb RunAs -ArgumentList '/c slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX'"
+
+echo Finding Offline Server ...
+powershell -Command "Start-Process cmd.exe -Verb RunAs -ArgumentList '/c slmgr /skms kms9.MSGuides.com'"
+
+echo Activating Windows ...
+powershell -Command "Start-Process cmd.exe -Verb RunAs -ArgumentList '/c slmgr /ato'"
